@@ -2,24 +2,24 @@ import React from "react";
 import "./VideoFooter.css";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
-function VideoFooter({name, description, music}) {
+function VideoFooter({ name, description, music }) {
   return (
-    <div className="VideoFooter">
-      <div className="VideoFooter_Text">
+    // Renderiza o componente
+    <div className="videoFooter">
+      <div className="videoFooter__text">
         <h3>@{name}</h3>
         <p>{description}</p>
-        <div className="VideoFooter_Music">
-          <MusicNoteIcon className="VideoFooter_Icon" />
-          <div className="VideoFooterMusic_Text">
+        <div className="videoFooter__music">
+          <MusicNoteIcon className="videoFooter__icon" />
+          <div className="videoFooterMusic__text">
             <p>{music}</p>
           </div>
-
         </div>
       </div>
       <img
-        className="VideoFooter_Record"
-        alt="Imagem de um vinil girando" /*Descreve uma imagem*/
-        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/vinil.png"
+        className="videoFooter_record"
+        alt="Imagem de um vinil girando"
+        src="https://privaty.com.br/wp-content/uploads/2023/03/vinil.png"
       />
     </div>
   );
