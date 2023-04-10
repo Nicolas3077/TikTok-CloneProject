@@ -1,42 +1,77 @@
-html{
+html {
   scroll-snap-type: y mandatory;
 }
 
-.App{
-  background-color: black;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+.App {
+
+  background: linear-gradient(45deg, #084177, #687466, #CD8D7B, #FBC490); /* Muda a cor de fundo */
+  background-size: 300% 300%;
+  animation: color 15s ease infinite;
+
+  height: 100vh; /* Tamanho. O VH significa o tamanho da tela do usuário, ele sempre será o tamanho total da tela*/
+
+  display: grid; /* Uma forma de display */
+
+  place-items: center; /* Coloca os itens dentro dele no centro */
+
 }
 
-.app_videos{
-  height: 100vh;
-  max-height: 800px;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 20px;
-  border: 1px solid black;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
+.app__videos {
+  height: 90vh;
+
+  max-height: 800px; /* Adiciona limite ao tamanho */
+
+  width: 60%; /* Muda o comprimento */
+
+  max-width: 500px; /* Adiciona um limite ao comprimento */
+
+  border: 3px solid rgba(58, 58, 58, 0.671);
+  outline: 1px solid rgba(88, 88, 88, 0.445);
+
+  border-radius: 15px; /* Arredonda as bordas */
+
+  overflow: scroll; /* Quando exceder... */
+
+  scroll-snap-type: y mandatory; /* Para fazer o snap no scroll */
+
   position: relative;
+
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
 }
 
-/* Esconde a scroll bar no chrome, safari e opera */
 
-.app_videos::-webkit-scrollbar{
+/* Para esconder a scroll bar no Chrome, Safari e Opera */
+
+.app__videos::-webkit-scrollbar {
   display: none;
 }
 
-/* Esconde a scroll bar no internet explorer, edge e firefox */
+/* Para esconder a scrollbar no Internet Explorer, Edge e Firefox  */
 
-.app_videos{
+.app__videos{
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: none; /* Para a barra de scroll sumir */
 }
 
-@media only screen and (max-width: 400px){
-  .app_videos{
+@keyframes color{
+
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+@media only screen and (max-width: 440px){
+
+  .app__videos{
     width: 100%;
     height: 100vh;
   }
+
 }

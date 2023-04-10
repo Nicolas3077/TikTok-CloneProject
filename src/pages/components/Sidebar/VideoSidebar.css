@@ -1,0 +1,46 @@
+.videoSidebar {
+
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: white;
+
+}
+
+.videoSideBar__option {
+
+  padding: 13px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.heart-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: heart 1s ease-out forwards;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) scale(2);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 440px){
+
+  .videoSidebar{
+    top: 46%;
+  }
+
+}
